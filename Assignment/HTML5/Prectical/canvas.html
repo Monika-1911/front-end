@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <canvas id="geeks" 
+            width="200" 
+            height="200" 
+            style="border:1px solid black">
+    </canvas>
+
+    <script>
+        let c = document.getElementById("geeks");
+        let cx = c.getContext("2d");
+        let grd = cx.createRadialGradient
+            (100, 100, 5, 100, 100, 100);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "green");
+        cx.fillStyle = grd;
+        cx.fillRect(0, 0, 200, 200);
+    </script>
+</body>
+
+</html>
