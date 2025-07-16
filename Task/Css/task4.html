@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      ul li {
+        display: inline-block;
+        background-color: rgb(22, 169, 223);
+        padding: 10px 20px;
+        position: relative;
+      }
+      ul li::after {
+        content: "";
+        height: 5px;
+        width: 0%;
+        background: rgb(5, 0, 0);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transition: 0.9s;
+      }
+
+      li:hover::after {
+        width: 100%;
+      }
+      ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      ul li a {
+        color: black;
+        font-size: 30px;
+      }
+       
+      .main ::after{
+        content: "";
+        height: 10px;
+        width:10%;
+        background: rgb(5, 0, 0);
+        top: 100%;
+        left: 0;
+        transition: 0.9s;
+
+      }
+      .main{
+        position: relative;
+      }
+      .box{
+        position: absolute;
+        height: 300px;
+        width: 400px;
+        border: 2px solid;
+        
+      }
+      #box1{
+        top: 50px;
+        left: 50px;
+        background-color: lightpink;
+        z-index: 2;
+      }
+  
+      
+      
+       </style>
+  </head>
+
+  <body>
+    <ul>
+      <li><a href="">home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Men's wear</a></li>
+      <li><a href="">Women's Wear</a></li>
+      <li><a href="">Short codes</a></li>
+      <li><a href="">Contact</a></li>
+
+      <li>
+        <a href="" id="icon"></a> <i class="fa-solid fa-cart-arrow-down" style="font-size: 35px; color: rgb(83, 217, 11); background-color: aliceblue;"></i>
+      </li>
+    </ul>
+    <div class="main">
+      <div class="box" id="box1">1</div>
+      <div class="box" id="box2">2</div>
+    </div>
+  </body>
+</html>

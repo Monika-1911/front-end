@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    transition: transform 5s ease-in-out;
+}
+
+button {
+    color: rgb(22, 22, 170);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.2vw;
+    display: block;
+    background-color: aquamarine;
+    border: none;
+    padding: 12px 35px;
+    margin: 100px auto;
+    cursor: pointer;
+}
+
+.btn-effect {
+    background: none;
+    border: 4px solid rgb(108, 13, 210);
+    margin: auto;
+    width: 180px;
+    height: 70px;
+    transform: scale(0);
+    transition: 1s ease;
+}
+
+.btn:hover .btn-effect {
+    transform: scale(1);
+    transform: translateY(-160px);
+}
+
+.main {
+    width: 500px;
+    height: 250px;
+    margin: 0 50px;
+    overflow: hidden;
+    transition: 3s ease-in-out;  
+}
+
+.img {
+    background-image: url(https://images.pexels.com/photos/8030176/pexels-photo-8030176.jpeg?_gl=1*wgd05e*_ga*MjAwOTQ5MTcxLjE3NTE0NDE4NTU.*_ga_8JE65Q40S6*czE3NTE1MzE1MzAkbzckZzEkdDE3NTE1MzE1NTAkajQwJGwwJGgw);
+    background-size: 100% 100%;
+
+}
+h2::first-letter {
+    color: rgb(208, 84, 22);
+    text-align: right;
+    padding: 95px 25px;
+    letter-spacing: 0.2vw;
+}
+.img-effect {
+    width: 480px;
+    height: 240px;
+    background-color: rgba(0,0,0,0.4);
+    transform: translate(25%);
+
+}
+
+.border {
+    width: 450px;
+    height: 220px;
+    border: 4px solid #120303;
+}
+.main:hover .img-effect {
+    transform: translate(10px,-212px);
+}
+.main:hover .border {
+    transform: translate(20px,-200px);
+
+}
+
+

@@ -1,0 +1,263 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* resuse */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* header start */
+#header {
+    background: rgb(34, 40, 49);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav-list .nav-item {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav-item .nav-a {
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-decoration: none;
+
+}
+
+.header-content {
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.header-content .header-h1 {
+    /* min and resp(), max */
+    /* 20px */
+    font-size: clamp(20px, 10vw, 153px);
+    letter-spacing: 6px;
+    font-weight: 400;
+    font-family: "Grand Hotel", cursive;
+    font-style: normal;
+}
+
+.header-content .header-h3 {
+    font-size: clamp(18px, 4vw, 33px);
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    margin: 20px 0;
+}
+
+.header-content .header-p {
+    width: 45%;
+    font-size: 15px;
+    margin: 20px 0;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+
+.btn-header {
+
+    font-size: clamp(18px, 4vw, 33px);
+    line-height: 28px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    background: rgb(41, 161, 156);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+#header::after {
+    content: url("/Image/header.png");
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    /* z-index: 0; */
+}
+
+.icon .bar {
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 700;
+    display: none;
+}
+
+/* header end */
+
+/* sec1 */
+#sec1 {
+    background: rgb(41, 161, 156);
+    padding: 30px 0;
+}
+
+#sec1 .row {
+    display: flex;
+}
+
+#sec1 .row .col {
+    width: 50%;
+}
+
+.sec1-h1 {
+    font-size: clamp(20px, 10vw, 125px);
+    letter-spacing: 5px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+}
+
+.btn-sec1 {
+    font-size: clamp(18px, 4vw, 33px);
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    background: rgb(34, 40, 49);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.img-sec1 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.sec1-p {
+    font-size: clamp(18px, 4vw, 24px);
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: right;
+}
+
+/* sec1 */
+
+
+#sec2 {
+    background: rgb(34, 40, 49);
+    padding: 30px 0;
+}
+
+#sec2 .row {
+    display: flex;
+}
+
+#sec2 .row .col {
+    width: 50%;
+}
+
+#sec2 .sec2-btn {
+    background: rgb(41, 161, 156);
+}
+
+#sec2 .sec2-p {
+    text-align: left;
+
+}
+
+/* review style */
+#review {
+    background: rgb(34, 40, 49);
+    padding: 30px 0;
+}
+
+#review .row {
+    display: flex;
+}
+
+#review .row .col {
+    width: 50%;
+}
+
+.review-h1 {
+    font-size: clamp(20px, 9vw, 88px);
+    color: #fefefe;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+    text-align: center;
+}
+
+#review .card-img {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.review-h3 {
+    font-size: 50px;
+    font-size: clamp(18px,6vw,50px);
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+    text-align: center;
+}
+
+.review-p {
+    width: 80%;
+    margin: 10px auto;
+      font-size: clamp(18px, 4vw, 25px);
+    letter-spacing: 1px;
+    line-height: 28px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+}
+.box-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    padding-top: 85px;
+}
+.sec-3{
+    background: rgb(34, 40, 49);
+
+}
+
+.img-sec3 {
+    width: 200PX;
+}
+    .box-section{
+        font-size: 40px;
+        color: #ffffff;
+        align-items: center;
+        padding-top: 80px;
+        
+    }
+    .btn-sec2{
+    font-size: clamp(16px, 4vw, 33px);
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Montserrat";
+    background: rgb(41, 161, 156);
+    border: none;
+    outline: none;
+     border-radius: 20px;
+     align-items: center;
+   
+    
+    }
+    

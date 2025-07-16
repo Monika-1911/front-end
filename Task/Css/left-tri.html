@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Shoppy Style Dropdown</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+    }
+
+    ul.navbar {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    ul.navbar > li {
+      position: relative;
+    }
+
+    ul.navbar > li > a {
+      color: white;
+      padding: 12px 20px;
+      display: block;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    ul.navbar > li:hover > a {
+      background-color: #555;
+    }
+
+    /* Dropdown styles */
+    ul.dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      min-width: 180px;
+      z-index: 99;
+    }
+
+    ul.dropdown li a {
+      color: #333;
+      padding: 10px 16px;
+      display: block;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    ul.dropdown li a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Show dropdown on hover */
+    li:hover > ul.dropdown {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul class="navbar">
+      <li><a href="#">Home</a></li>
+      <li>
+        <a href="#">Men ▼</a>
+        <ul class="dropdown">
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Watches</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Women ▼</a>
+        <ul class="dropdown">
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Handbags</a></li>
+          <li><a href="#">Jewelry</a></li>
+        </ul>
+      </li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+</body>
+</html>

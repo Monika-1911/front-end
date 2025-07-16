@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      .data {
+        height: 300px;
+        width: 490px;
+        border: 2px solid rgba(0, 0, 0.3);
+        overflow: hidden;
+      }
+      .img {
+        height: 300px;
+        width: 500px;
+        border: 2px solid;
+        background: url("https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bb1.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        transform: translateX(-15px);
+        transition: 0.6s;
+      }
+      .border {
+        height: 200px;
+        width: 400px;
+        border: 5px solid white;
+        margin: 50px auto;
+        color: white;
+        font-size: 30px;
+        text-align: right;
+        line-height: 250px;
+        letter-spacing: 10px;
+        transform: translateX(-15px);
+        transition: 0.6s;
+        opacity: 0;
+      }
+      .img:hover {
+        transform: translateX(0px);
+      }
+      .img:hover .border {
+        transform: translateX(0px);
+        opacity: 1;
+      }
+
+      .main {
+        margin: 50px auto;
+        background: url(https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bb1.jpg);
+        width: 500px;
+        height: 300px;
+        background-size: 100% 100%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      h2 {
+        text-align: right;
+        color: #fff;
+        line-height: 300px;
+        letter-spacing: 12px;
+        font-size: 34px;
+      }
+
+      span {
+        color: aqua;
+      }
+
+      .right {
+        position: absolute;
+        width: 500px;
+        height: 300px;
+        background-color: rgba(0, 0, 0, 0.3);
+        right: -100%;
+        top: -100%;
+        transition: 2s;
+      }
+
+      .left {
+        position: absolute;
+        width: 500px;
+        height: 300px;
+        background-color: rgba(0, 0, 0, 0.3);
+        left: -100%;
+        bottom: -100%;
+        transition: 2s;
+      }
+
+      .main:hover .right {
+        right: 0;
+        top: 0;
+      }
+
+      .main:hover .left {
+        left: 0;
+        bottom: 0;
+      }
+      .icon{
+        margin:50px;
+        transition: 5s ease-out;
+
+    }
+    .icon i{
+        color: #fff;
+        background-color: black;
+        padding: 20px;
+        font-size: 30px;
+        transform: scale(1.5);
+    }
+    .icon:hover i {
+        background-color: rgba(3, 103, 69, 0.7);
+
+    }
+    </style>
+  </head>
+  <body>
+    <div class="data">
+      <div class="img">
+        <div class="border">Sale up to 55%</div>
+      </div>
+    </div>
+
+    <div class="main">
+      <h2>Flat <span>50%</span>offer</h2>
+      <div class="right"></div>
+      <div class="left"></div>
+    </div>
+    <div class="icon">
+        <i class="fa-solid fa-house"></i>
+    </div>
+  </body>
+</html>

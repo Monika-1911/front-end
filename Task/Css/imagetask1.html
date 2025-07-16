@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        height: 600px;
+        width: 700px;
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0;
+        overflow: hidden;
+      }
+      .image {
+        height: 600px;
+        width: 700px;
+        background-image: url(https://p.w3layouts.com/demos_new/template_demo/26-08-2021/webservice-liberty-demo_Free/1229779082/web/assets/images/p2.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        transform: translate(5px);
+        
+      }
+      .main h2 {
+    color: black;
+    font-size: 30px;
+    transition: 3s ease-in-out;
+      }
+      .main h3 {
+        color: black;
+        opacity: 0;
+        transition: 2s;
+      }
+      .main h2 :hover{
+        color: red;
+      }
+      .image h3:hover {
+        transform: translate(0px);
+        opacity: 1;
+      }
+       .image-effect {
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: 2s;
+        transform: translate(-25%);
+        height: 600px;
+        width: 700px;
+        position: absolute;
+        margin: auto;
+      }
+      /* .right{
+        position: absolute;
+        width: 500px;
+        height: 300px;
+        background-color: black;
+        left: -100%;
+        bottom: -100%;
+        transition: 2s;
+      }
+        */
+    
+      
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="image">
+        <div class="right">
+          <h2><span>Wordpress</span></h2>
+          <h3>
+            
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit soluta iste perferendis fugiat, eius dolores praesentium? Quod, ipsa velit aspernatur ea assumenda repellat libero, vero provident praesentium rerum minus. Perspiciatis.
+            
+          </h3>
+          <div class="image-effect"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

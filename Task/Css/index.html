@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            margin: 50px;
+            width: 300px;
+            height: 400px;
+            background: url(https://p.w3layouts.com/demos_new/template_demo/26-08-2021/webservice-liberty-demo_Free/1229779082/web/assets/images/p2.jpg);
+            background-size: 100% 100%;
+            position: relative;
+        }
+
+        .main::before {
+            position: absolute;
+            content: "";
+            width: 300px;
+            height: 400px;
+            background-color: rgba(0,0, 0, 0.4);
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .main:hover::before {
+            opacity: 1;
+        }
+
+        .text {
+            position: absolute;
+            /* color: #fff; */
+            
+        }
+      p {
+        position: absolute;
+        top: 100%;
+        bottom: 100%;
+        color: black;
+        padding: 10px;
+        opacity: 0;
+        
+         }
+         
+        .text h2:hover{
+            color: darkred;
+        }
+        p :hover{
+            position: absolute;
+            opacity: 1;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="text">
+            <h2>Wordpress</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur <br> adipisicing elit. Veniam aliquam aut nobis impedit error </p>
+        </div>
+    </div>
+</body>
+</html>

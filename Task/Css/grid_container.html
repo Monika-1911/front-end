@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 100px 100px;
+        gap: 10px;
+    }
+    .item{
+        border: 2px solid;
+    }
+    #Box4{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    #Box5{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start:4 ;
+        grid-column-end:3 ;
+    }
+    #Box6{
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start:2;
+        grid-column-end:3 ;
+    }
+    #Box6{
+        grid-row-start: 3;
+        grid-row-end: 3;
+        grid-column-start:2;
+        grid-column-end:3 ;
+    }
+    #Box7{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start:1;
+        grid-column-end:2;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="item" id="Box1">1</div>
+    <div class="item" id="Box2">2</div>
+    <div class="item" id="Box3">3</div>
+    <div class="item" id="Box4">4</div>
+    <div class="item" id="Box5">5</div>
+    <div class="item" id="Box6">6</div>
+    <div class="item" id="Box7">7</div>
+    <div class="item" id="Box8">8</div>
+    
+    </div>
+</body>
+</html>
