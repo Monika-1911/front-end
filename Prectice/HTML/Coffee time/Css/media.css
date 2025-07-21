@@ -54,8 +54,30 @@
     #review .row .col {
         width: 90%;
         margin: 30px auto;
-    
+
     }
+
+    #footer .row {
+        display: block;
+    }
+
+    #footer .row .col-4 {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 100% */
+    #footer .row .col-6 {
+        width: 100%;
+        text-align: center;
+    }
+
+    #footer .row .col-6 .col {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+
 
 
 }

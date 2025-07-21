@@ -207,7 +207,7 @@
 
 .review-h3 {
     font-size: 50px;
-    font-size: clamp(18px,6vw,50px);
+    font-size: clamp(18px, 6vw, 50px);
     color: #ffffff;
     font-weight: 400;
     font-family: "Grand Hotel";
@@ -217,7 +217,7 @@
 .review-p {
     width: 80%;
     margin: 10px auto;
-      font-size: clamp(18px, 4vw, 25px);
+    font-size: clamp(18px, 4vw, 25px);
     letter-spacing: 1px;
     line-height: 28px;
     color: #ffffff;
@@ -225,39 +225,64 @@
     font-family: "Montserrat";
     text-align: center;
 }
-.box-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    padding-top: 85px;
-}
-.sec-3{
-    background: rgb(34, 40, 49);
 
-}
-
-.img-sec3 {
-    width: 200PX;
-}
-    .box-section{
-        font-size: 40px;
-        color: #ffffff;
-        align-items: center;
-        padding-top: 80px;
-        
-    }
-    .btn-sec2{
-    font-size: clamp(16px, 4vw, 33px);
-    color: #ffffff;
-    font-weight: 500;
-    font-family: "Montserrat";
+/* footer */
+#footer {
+    padding: 70px 0;
     background: rgb(41, 161, 156);
-    border: none;
-    outline: none;
-     border-radius: 20px;
-     align-items: center;
+}
+
+#footer .row {
+    display: flex;
+}
+
+#footer .row .col-4 {
+    width: 40%;
+}
+
+/* 100% */
+#footer .row .col-6 {
+    width: 60%;
    
-    
-    }
-    
+}
+
+#footer .row .col-6 .col {
+    width: 33.33%;
+
+}
+
+.footer-h4 {
+
+    font-size: clamp(18px, 4vw, 33px);
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+}
+
+.footer-ul {
+    list-style: none;
+
+}
+
+.footer-ul .footer-li {
+    margin: 10px 0;
+}
+
+.footer-ul .footer-li .footer-a {
+    font-size: clamp(18px, 4vw, 22px);
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-decoration: none;
+}
+
+.footer-p {
+    font-size: clamp(18px, 4vw, 22px);
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-family: "Montserrat";
+    width: 90%;
+    margin: 10px 0;
+}
