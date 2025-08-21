@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <table align="center">
+        <caption>Form data</caption>
+        <form action="" >
+            <tr>
+                <td><input type="text" onblur="return validation(nm,nmerr)" placeholder="Enter your name" id="nm"></td>
+                <td><span id="nmerr"></span></td>
+            </tr>
+            <tr>
+                <td><input type="text" onblur="return validation(unm,unmerr)" placeholder="Enter your usrname" id="unm"></td>
+                <td><span id="unmerr"></span></td>
+            </tr>
+            <tr>
+                <td><input type="email" onblur="return validation(email,emerr)"  placeholder="Enter your Email" id="email"></td>
+                <td><span id="emerr"></span></td>
+            </tr>
+            <tr>
+                <td><input type="tel" id="mb" onblur="return validation(mb,mberr)" placeholder="Enter your number"></td>
+                <td><span id="mberr"></span></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit"></td>
+            </tr>
+        </form>
+    </table>
+
+    <script>
+
+        // let data = ""
+        function validation(inp,err)
+        {
+            if(inp.value == "" || inp.value == null)
+            {
+                err.innerHTML = "Pls required field..!"
+                err.style.color = "red";
+                inp.style.border = "2px solid red";
+                return false;
+            }
+            else{
+                err.innerHTML = "";
+                inp.style.border = "2px solid green";
+            }
+        }
+
+    </script>
+</body>
+</html>

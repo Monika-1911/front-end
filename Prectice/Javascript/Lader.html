@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- syntax :-0 
+
+    if(){
+        ..code
+    }
+    else if(){
+        ..code
+    }
+    else if(){
+        ..code
+    }
+    else{
+        ..code
+    } -->
+
+    <script>
+
+        let marks = 33
+
+        if(marks>100 || marks<0){
+            console.log("Marks are invalid..!",marks);
+        }
+        // 85 start and 100 
+        else if(marks>=85 && marks<=100){
+            console.log("Grade : A " ,marks)
+        }
+        else if(marks>=70 && marks<85){
+            console.log("Grade : B",marks)
+        }
+        else if(marks<70 && marks>=55){
+            console.log("Grade : C",marks)
+        }
+        else if(marks<55 && marks>35){
+            console.log("grade : D",marks)
+        }
+        else{
+            console.log("Faild..!")
+        }
+        
+
+    </script>
+</body>
+</html>

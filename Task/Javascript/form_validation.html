@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table align="center">
+        <caption>Form data</caption>
+        <form action="" onsubmit="return validation()">
+            <tr>
+                <td><input type="text" placeholder="Enter your name" id="nm"></td>
+                <td><span id="nmerr"></span></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Enter your usrname" id="unm"></td>
+                <td><span id="unmerr"></span></td>
+            </tr>
+            <tr>
+                <td><input type="email" placeholder="Enter your Email" id="email"></td>
+                <td><span id="emerr"></span></td>
+            </tr>
+            <tr>
+                <td><input type="tel" id="mb" placeholder="Enter your number"></td>
+                <td><span id="mberr"></span></td>
+            </tr>
+            <tr>
+                <td><input id="psw" type="password" placeholder="Enter yuor password"></td>
+                <td><span id="pswerr"></span></td>
+            </tr>
+            <tr>
+                <td><input id="cpsw" type="password" placeholder="Enter you cpassword"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit"></td>
+            </tr>
+        </form>
+    </table>
+
+
+    <script>
+
+        let name_tag = document.getElementById("nm")
+        let nmerr = document.getElementById("nmerr")
+
+        let usrname_tag = document.getElementById("unm")
+        let userr = document.getElementById("unmerr")
+
+        let email_tag = document.getElementById("email")
+        let emerr = document.getElementById("emerr")
+
+        let mb_tag = document.getElementById("mb")
+        let mberr = document.getElementById("mberr")
+
+        let psas_tag = document.getElementById("psw")
+        let pswerr = document.getElementById("pswerr")
+        let cpsas_tag = document.getElementById("cpsw")
+
+        function validation(){
+            if(name_tag.value == "" || name_tag.value == null){
+                console.log("Name");
+                nmerr.innerHTML = "Name is required..!";
+                nmerr.style.color = "red"
+                return false;
+            }
+            else{
+                nmerr.innerHTML = "";
+                
+            }
+
+            if(usrname_tag.value == "" || usrname_tag.value == null)
+            {
+                userr.innerHTML = "user name is required..!";
+                userr.style.color = "red"
+                return false
+            }
+            else{
+                userr.innerHTML = "";
+            }
+              if(email_tag.value == "" || email_tag.value == null)
+            {
+                emerr.innerHTML = "Email is required..!";
+                emerr.style.color = "red"
+                return false
+            }
+            else{
+                emerr.innerHTML = "";
+            }
+
+              if(mb_tag.value == "" || mb_tag.value == null)
+            {
+                mberr.innerHTML = "mobile is required..!";
+                mberr.style.color = "red"
+                return false
+            }
+            else{
+                mberr.innerHTML = "";
+            }
+
+              if(psas_tag.value == "" || psas_tag.value == null)
+            {
+                pswerr.innerHTML = "password is required..!";
+                pswerr.style.color = "red"
+                return false
+            }
+            else{
+                pswerr.innerHTML = "";
+            }
+            if(psas_tag.value !== cpsas_tag.value)
+            {
+                 alert("password does not match...!");
+                 return false
+            }
+        }
+    </script>
+</body>
+
+</html>

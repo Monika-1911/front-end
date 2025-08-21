@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Face Glow Light</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.4);
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+Tap screen to change light color
+<script>
+  const colors = [
+    "#ffffff", // White
+    "#ffd7b5", // Warm
+    "#ffb5d7", // Pink
+    "#b5e1ff", // Soft Blue
+    "#b5ffcc"  // Mint
+  ];
+  let index = 0;
+  
+  document.body.addEventListener("click", () => {
+    index = (index + 1) % colors.length;
+    document.body.style.background = colors[index];
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Validation</title>
+  <style>
+    span.error { color: red; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <form onsubmit="return validateForm()" align="center">
+    <table align="center">
+      <caption>Form Data</caption>
+      <tr>
+        <td><input type="text" placeholder="Enter your name" data-id="nm" /></td>
+        <td><span id="nm" class="error"></span></td>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder="Enter your username" data-id="unm" /></td>
+        <td><span id="unm" class="error"></span></td>
+      </tr>
+      <tr>
+        <td><input type="email" placeholder="Enter your email" data-id="email" /></td>
+        <td><span id="email" class="error"></span></td>
+      </tr>
+      <tr>
+        <td><input type="tel" placeholder="Enter your number" data-id="mb" /></td>
+        <td><span id="mb" class="error"></span></td>
+      </tr>
+      <tr>
+        <td><input type="password" placeholder="Enter your password" id="psw" data-id="psw" /></td>
+        <td><span id="psw" class="error"></span></td>
+      </tr>
+      <tr>
+        <td><input type="password" placeholder="Confirm password" id="cpsw" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" /></td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    function validateForm() {
+      let isValid = true;
+      const inputs = document.querySelectorAll("[data-id]");
+      
+      inputs.forEach(input => {
+        const errorSpan = document.getElementById(input.dataset.id);
+        if (!input.value.trim()) {
+          errorSpan.textContent = `${input.placeholder.split(" ")[2]} is required..!`;
+          isValid = false;
+        } else {
+          errorSpan.textContent = "";
+        }
+      });
+
+      const password = document.getElementById("psw").value;
+      const confirmPassword = document.getElementById("cpsw").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        isValid = false;
+      }
+
+      return isValid;
+    }
+  </script>
+</body>
+</html>

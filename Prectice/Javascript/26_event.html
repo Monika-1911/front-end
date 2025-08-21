@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="data" onmouseenter="enterdata()" onmouseleave="levedata()">Hello this div tag</div>
+
+    <script>
+        let div_tag = document.getElementById("data")
+        console.log(div_tag)
+
+        function enterdata() {
+            div_tag.innerHTML = "<b>Hello enter data</b>";
+            div_tag.style.background = "blue";
+            div_tag.style.padding = "40px";
+        }
+
+        function levedata() {
+            div_tag.innerHTML = "<b>Hello leve data</b>";
+            div_tag.style.background = "red";
+            div_tag.style.padding = "40px";
+        }
+    </script>
+</body>
+
+</html>

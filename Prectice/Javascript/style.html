@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h1{
+            font-size: ;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1 id="h">Hello Javascript</h1>
+
+    <button onclick="adddata()">style use</button>
+
+    <script>
+        let h1_tag = document.getElementById("h");
+
+        function adddata() {
+            console.log(h1_tag)
+            h1_tag.innerText = "Hello css";
+            // javascript color,effet
+            h1_tag.style.color = "red";
+            h1_tag.style.background = "blue";
+            h1_tag.style.fontSize = "50px"
+        }
+    </script>
+
+</body>
+
+</html>

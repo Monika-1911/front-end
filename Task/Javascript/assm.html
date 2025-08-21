@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo List with Cookies</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f1f1f1;
+    }
+
+    .todo-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #00b894;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #019374;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    li {
+      background: #f7f7f7;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="todo-container">
+    <h2>My Todo List</h2>
+    <input type="text" id="todoInput" placeholder="Enter a new task..." />
+    <button id="addBtn">Add Task</button>
+    <ul id="todoList"></ul>
+  </div>
+
+  <script>
+    // Select input, button, and list elements
+    const todoInput = document.getElementById('todoInput');
+    const addBtn = document.getElementById('addBtn');
+    const todoList = document.getElementById('todoList');
+
+    // Load todos from cookie when page loads
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTodos = getCookie("todos");
+      if (savedTodos) {
+        const todos = JSON.parse(savedTodos);
+        todos.forEach(todo => addTodoToDOM(todo));
+      }
+    });
+
+    // Add event listener to the Add button
+    addBtn.addEventListener('click', () => {
+      const task = todoInput.value.trim(); // Remove extra space
+      if (task !== "") {
+        addTodoToDOM(task);   // Show in the list
+        saveTodoToCookie(task); // Save in cookies
+        todoInput.value = ""; // Clear input field
+      }
+    });
+
+    // Add new task to the DOM (list)
+    function addTodoToDOM(task) {
+      const li = document.createElement('li');
+      li.textContent = task;
+      todoList.appendChild(li);
+    }
+
+    // Save todo to cookies
+    function saveTodoToCookie(task) {
+      // Get current list from cookie
+      let todos = getCookie("todos");
+      todos = todos ? JSON.parse(todos) : [];
+
+      // Add new task to list
+      todos.push(task);
+
+      // Save updated list as cookie (for 7 days)
+      document.cookie = `todos=${JSON.stringify(todos)}; max-age=${60 * 60 * 24 * 7}`;
+    }
+
+    // Get a cookie value by name
+    function getCookie(name) {
+      const cookieArr = document.cookie.split(";");
+
+      for (let i = 0; i < cookieArr.length; i++) {
+        let cookiePair = cookieArr[i].split("=");
+        if (cookiePair[0].trim() === name) {
+          return decodeURIComponent(cookiePair[1]);
+        }
+      }
+      return null;
+    }
+  </script>
+
+</body>
+</html>
