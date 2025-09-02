@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        let arr = [1,2,3,4,5]
+        console.log(arr)
+        // console.log(arr[0])
+
+        // 1) for  
+        // for(let i=0;i<arr.length;i++){
+        //     console.log(arr[i])
+        // }
+
+        // for of value
+        // for(let data of arr){
+        //     console.log(data)
+        // }
+
+        // in index and value
+        for(let index in arr){
+            // console.log(index)
+            // console.log(arr[index])
+            console.log("index =>",index," value =>",arr[index]);
+        }
+
+        // 4) foreach :- index and value spatre 
+
+        arr.forEach((data,i,arr)=>{
+            console.log(arr)
+            // console.log(data)
+            // console.log(i)
+            document.writeln("index =>",i,"value =>",data,"<br>")
+        })
+
+        
+
+    </Script>
+</body>
+</html>

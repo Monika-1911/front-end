@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  <link rel="stylesheet" href="/bookmyshow.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
 </head>
 <body>
    <nav class="navbar navbar-expand-lg ">
@@ -24,20 +24,197 @@
           <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
           </form>
           </div>
-          <div class="dropdown">
-  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="btn-group">
+  <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
     Ahemdabad
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#"></a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
+  <ul class="dropdown-menu dropdown-menu-end dropdown-menu">
+    <li><button class="dropdown-item" type="button"><div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="d-flex position-relative" role="search">
+          <input class="form-control me-2 ps-5" type="search" 
+                 placeholder="Search for your city" aria-label="Search" style="width: 500px;">
+          <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i></button></li>
+    </ul>
 </div>
 <button type="button" class="btn btn-danger">Sign in</button>
     <i class="fa-solid fa-bars ms-4 fs-1"></i>
     </div>
+    </div>
+
   </nav>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Streams</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Events</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Plays</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sports</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Activities</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">ListYourShow</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Corporates</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Offers</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Gift Cards</a>
+        </li>
+        </li>
+        </ul>
+      </span>
+    </div>
+  </div>
+</nav>
+<!-- <swiper-container class="mySwiper" navigation="true" pagination="true" keyboard="true" mousewheel="true"
+    css-mode="true">
+    <swiper-slide><img src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-rang-morla-ft-aditya-gadhvi-0-2025-8-7-t-14-36-15.jpg" alt=""></swiper-slide>
+    <swiper-slide><img src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-lollapalooza-india-2026-0-2025-8-18-t-14-39-3.jpg" alt=""></swiper-slide>
+    <swiper-slide><img src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-satrangi-re-by-sonu-nigam-0-2025-7-30-t-7-12-36.jpg" alt=""></swiper-slide>
+<swiper-slide><img src="https://assets-in-gm.bmscdn.com/promotions/cms/creatives/1755763132646_21staugplaycarddesktophpc.jpg" alt=""></swiper-slide>
+
+  </swiper-container> -->
+  <swiper-container class="mySwiper"
+    navigation="true"
+    pagination="true"
+    keyboard="true"
+    mousewheel="true"
+    css-mode="true"
+    autoplay='{"delay":3000, "disableOnInteraction": false}'  <!-- Auto slide every 3 sec -->
+    loop="true"> <!-- Infinite loop -->
+    
+    <swiper-slide>
+        <img src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-rang-morla-ft-aditya-gadhvi-0-2025-8-7-t-14-36-15.jpg" alt="">
+    </swiper-slide>
+    <swiper-slide>
+        <img src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-lollapalooza-india-2026-0-2025-8-18-t-14-39-3.jpg" alt="">
+    </swiper-slide>
+    <swiper-slide>
+        <img src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-satrangi-re-by-sonu-nigam-0-2025-7-30-t-7-12-36.jpg" alt="">
+    </swiper-slide>
+    <swiper-slide>
+        <img src="https://assets-in-gm.bmscdn.com/promotions/cms/creatives/1755763132646_21staugplaycarddesktophpc.jpg" alt="">
+    </swiper-slide>
+</swiper-container>
+
+
+<div class="container">
+<div class="h3">Recommended Movies</div>
+</div>
+<swiper-container class="mySwiper" slides-per-view="5"space-between="20" pagination="true"
+    pagination-type="fraction" navigation="true">
+    <swiper-slide>
+      <div class="slide-content bg-white">
+      <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-Ny45LzEwICAxMzguOUsgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00356501-ytqqfwkban-portrait.jpg" alt="">
+    <p class="mt-2 text-start fw-bold mb-1">War 2</p><p class="text-start">Action/Thriller</p>
+    </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slide-content bg-white">
+              <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC43LzEwICAyNi44SyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00452035-asllmgwfmq-portrait.jpg" alt="">
+              <p class="mt-2 text-start fw-bold mb-1">Coolie: The Powerhouse (Hindi)</p><p class="text-start">Action/Thriller</p>
+    </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slide-content bg-white">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS42LzEwICAyNjguMUsgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00429289-tldcxtvbqx-portrait.jpg" alt="">
+      <p class="mt-2 text-start fw-bold mb-1">Mahavatar Narsimha
+</p><p class="text-start">Action/Animation/Drama</p>
+      </div>
+</swiper-slide>
+    <swiper-slide>
+      <div class="slide-content bg-white">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC4xLzEwICAyMzcuOEsgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00447951-besqwckxum-portrait.jpg" alt="">
+        <p class="mt-2 text-start fw-bold mb-1">Saiyaara</p><p class="text-start">Drama/Musical/Romantic</p>
+      </div></swiper-slide>
+    <swiper-slide>
+      <div class="slide-content bg-white">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC43LzEwICAxLjFLIFZvdGVz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00446783-dpdqkplvrz-portrait.jpg" alt=""><p class="mt-2 text-start fw-bold mb-1">Maharani</p><p class="text-start">Comedy/Drama</p>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slide-content bg-white">
+      <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@like_202006280402.png,lx-24,ly-617,w-29,l-end:l-text,ie-MjYuNEsgTGlrZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00445955-jcuwxgzvjb-portrait.jpg" alt="">
+    <p class="mt-2 text-start fw-bold mb-1">Nobody 2</p><p class="text-start">Action/Thriller</p>
+  </div>
+  </swiper-slide>
+    <swiper-slide>
+      <div class="slide-content bg-white">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC42LzEwICA1NiBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00456484-mhzgxwvqdv-portrait.jpg" alt="">
+        <p class="mt-2 text-start fw-bold mb-1">Bhola No Bhagwan</p><p class="text-start">Action/Drama/Romantic</p>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slide-content bg-white">
+      <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-Ny4zLzEwICAyNC40SyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00450471-urmlmaranx-portrait.jpg" alt="">
+      <p class="mt-2 text-start fw-bold mb-1">Sun Of Sardar 2</p><p class="text-start">Comedy/Family/Romantic</p>
+    </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slide-content bg-white">
+        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-Ny43LzEwICAxOS4zSyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00399488-cyagpzwkcw-portrait.jpg" alt="">
+        <p class="mt-2 text-start fw-bold mb-1">Dhadak 2</p><p class="text-start">Drama/Romantic</p>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="slide-content bg-white">
+      <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-Ny43LzEwICAxLjVLIFZvdGVz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00440409-wdxndfcuxe-portrait.jpg" alt="">
+    <p class="mt-2 text-start fw-bold mb-1">Udaipur Files: Kanhaiya Lal Tailor Murder</p><p class="text-start">Crime/Drama</p>
+    </div>
+  </swiper-slide>
+  
+</swiper-container>
+<img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/stream-leadin-web-collection-202210241242.png" class="img-fluid" alt="..." style="padding: 60px;">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+  <div class="container">
+<div class="h3">The best of live Events</div>
+</div>
+<swiper-container class="mySwiper" slides-per-view="5"space-between="20" pagination="true" 
+    pagination-type="fraction" navigation="true" >
+    <swiper-slide><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-ODArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/comedy-shows-collection-202211140440.png" alt=""></swiper-slide>
+    <swiper-slide><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/theatre-shows-collection-202211140440.png" alt=""></swiper-slide>
+    <swiper-slide><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/kids-banner-desktop-collection-202503251132.png" alt=""></swiper-slide>
+    <swiper-slide><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/music-shows-collection-202211140440.png" alt=""></swiper-slide>
+    <swiper-slide><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/arts-crafts-collection-202211140440.png" alt=""></swiper-slide>
+    <swiper-slide><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MzArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/workshop-and-more-web-collection-202211140440.png" alt=""></swiper-slide>
+    <swiper-slide><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MyBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/interactive-games-collection-202211140440.png" alt=""></swiper-slide>
+    <swiper-slide><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MyBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/dance-classes-collection-202211140440.png"alt=""></swiper-slide>
+</swiper-container>
+<div class="container">
+  <div class="pt-5">
+  <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-banner-web-collection-202208191200.png" 
+       class="img-fluid" alt="...">
+</div>
+  <div class="badge text-start rounded-0" 
+     style="width:100%; background-color:#2b3149; color:white;">
+  <p class="mb-0 fw-bold">Premieres</p>
+  <p class="mb-0">Brand new releases every Friday</p>
+</div>
+</div>
 </body>
 </html>
             
