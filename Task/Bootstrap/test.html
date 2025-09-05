@@ -1,44 +1,153 @@
-<swiper-container class="mySwiper" slides-per-view="5" space-between="20" pagination="true"
-    pagination-type="fraction" navigation="true">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Same Footer</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    footer {
+      background-color: #1c1c1c;
+      color: #fff;
+      font-size: 14px;
+    }
+    footer a {
+      color: #bbb;
+      text-decoration: none;
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .footer-top {
+      border-bottom: 1px solid #444;
+      padding: 15px 0;
+    }
+    .footer-links h6 {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #ccc;
+    }
+    .contact-btn {
+      background-color: #e50914;
+      color: #fff;
+      border: none;
+      padding: 6px 16px;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+    .contact-btn:hover {
+      background-color: #c40812;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
 
-    <swiper-slide>
-        <div class="slide-content text-center">
-            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-Ny45LzEwICAxMzguOUsgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00356501-ytqqfwkban-portrait.jpg" alt="" class="img-fluid">
-            <p class="mt-2">Movie Title 1</p>
+  <!-- Footer -->
+  <footer class="pt-3">
+    <div class="container">
+
+      <!-- Top Bar -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center footer-top">
+        <div class="text-center text-md-start mb-2 mb-md-0">
+          <a href="#" class="me-3">List your Show</a>
+          <span>Got a show, event, activity or a great experience? Partner with us &amp; get listed on BookMyShow</span>
         </div>
-    </swiper-slide>
-
-    <swiper-slide>
-        <div class="slide-content text-center">
-            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC43LzEwICAyNi44SyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00452035-asllmgwfmq-portrait.jpg" alt="" class="img-fluid">
-            <p class="mt-2">Movie Title 2</p>
+        <div class="text-center text-md-end mt-2 mt-md-0">
+          <button class="contact-btn">Contact today!</button>
         </div>
-    </swiper-slide>
+      </div>
 
-    <swiper-slide>
-        <div class="slide-content text-center">
-            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS42LzEwICAyNjguMUsgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00429289-tldcxtvbqx-portrait.jpg" alt="" class="img-fluid">
-            <p class="mt-2">Movie Title 3</p>
+      <!-- Three top services -->
+      <div class="row text-center text-md-start py-3 border-bottom border-secondary">
+        <div class="col-md-4 mb-3">
+          <h6>24/7 CUSTOMER CARE</h6>
         </div>
-    </swiper-slide>
-
-    <swiper-slide>
-        <div class="slide-content text-center">
-            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC4xLzEwICAyMzcuOEsgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00447951-besqwckxum-portrait.jpg" alt="" class="img-fluid">
-            <p class="mt-2">Movie Title 4</p>
+        <div class="col-md-4 mb-3">
+          <h6>RESEND BOOKING CONFIRMATION</h6>
         </div>
-    </swiper-slide>
+        <div class="col-md-4 mb-3">
+          <h6>SUBSCRIBE TO THE NEWSLETTER</h6>
+        </div>
+      </div>
 
-    <!-- Repeat same structure for all slides -->
-</swiper-container>
+      <!-- Footer Links -->
+      <div class="footer-links py-4">
+        <div class="mb-4">
+          <h6>MOVIES NOW SHOWING IN AHMEDABAD</h6>
+          <p>
+            <a href="#">Baaghi 4</a> | <a href="#">Vash | Leel 2</a> | <a href="#">The Conjuring: Last Rites</a> |
+            <a href="#">Param Sundari</a> | <a href="#">Bachhu Ni Benpani</a> | <a href="#">The Bengal Files</a> |
+            <a href="#">Nankhatlal</a> | <a href="#">Avatar Narsimha</a> | <a href="#">War 2</a> | <a href="#">Dil Madhraasi</a>
+          </p>
+        </div>
 
-<style>
-.slide-content img {
-    border-radius: 8px;
-}
-.slide-content p {
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-}
-</style>
+        <div class="mb-4">
+          <h6>UPCOMING MOVIES IN AHMEDABAD</h6>
+          <p>
+            <a href="#">Kudia Namdu Uru</a> | <a href="#">Mangalsana</a> | <a href="#">Asthan Na Mahan Mouma</a> |
+            <a href="#">College Campus</a> | <a href="#">Elaume</a> | <a href="#">Om Shivam</a> |
+            <a href="#">Tinchari Mai: The Untold Story</a> | <a href="#">Devi - Ek Pretmanobir Panchali</a> |
+            <a href="#">Mehar</a> | <a href="#">Bad Girl</a>
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h6>MOVIES BY GENRE</h6>
+          <p>
+            <a href="#">Drama Movies</a> | <a href="#">Action Movies</a> | <a href="#">Thriller Movies</a> |
+            <a href="#">Comedy Movies</a> | <a href="#">Romantic Movies</a> | <a href="#">Family Movies</a> |
+            <a href="#">Musical Movies</a> | <a href="#">Sports Movies</a> | <a href="#">Crime Movies</a> |
+            <a href="#">Animation Movies</a>
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h6>MOVIES BY LANGUAGE</h6>
+          <p>
+            <a href="#">Movies in Hindi</a> | <a href="#">Movies in English</a> | <a href="#">Movies in Gujarati</a> |
+            <a href="#">Movies in Telugu</a> | <a href="#">Movies in Malayalam</a> | <a href="#">Movies in Tamil</a> |
+            <a href="#">Movies in Konkani</a> | <a href="#">Movies in Portuguese</a> | <a href="#">Movies in Khasi</a> |
+            <a href="#">Movies in Tulu</a>
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h6>SPORTS EVENTS IN AHMEDABAD</h6>
+          <p>
+            <a href="#">Running</a> | <a href="#">Chess</a> | <a href="#">Cycling</a> | <a href="#">Kabaddi</a> |
+            <a href="#">Baseball</a> | <a href="#">Cricket</a> | <a href="#">Horse Race</a> | <a href="#">Boat Race</a> |
+            <a href="#">Archery</a> | <a href="#">Bowling</a>
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h6>EVENTS IN TOP CITIES</h6>
+          <p>
+            <a href="#">Events in Mumbai</a> | <a href="#">Events in Delhi-NCR</a> | <a href="#">Events in Chennai</a> |
+            <a href="#">Events in Bengaluru</a> | <a href="#">Events in Hyderabad</a> | <a href="#">Events in Ahmedabad</a> |
+            <a href="#">Events in Kolkata</a> | <a href="#">Events in Kochi</a>
+          </p>
+        </div>
+
+        <div>
+          <h6>CINEMAS IN TOP CITIES</h6>
+          <p>
+            <a href="#">Cinemas in Mumbai</a> | <a href="#">Cinemas in Delhi-NCR</a> | <a href="#">Cinemas in Chennai</a> |
+            <a href="#">Cinemas in Bengaluru</a> | <a href="#">Cinemas in Hyderabad</a> | <a href="#">Cinemas in Ahmedabad</a> |
+            <a href="#">Cinemas in Kolkata</a> | <a href="#">Cinemas in Kochi</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
