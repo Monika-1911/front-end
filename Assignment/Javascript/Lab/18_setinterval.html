@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetInterval</title>
+  </head>
+  <body>
+    <h1 id="clock"></h1>
+
+    <script>
+      function showTime() {
+        let now = new Date();
+        let time = now.toLocaleTimeString();
+        document.getElementById("clock").innerHTML = time;
+      }
+
+      setInterval(showTime, 2000);
+      showTime();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error Handling</title>
+  </head>
+  <body>
+    <script>
+      try {
+        let a = parseFloat(prompt("Enter first number:"));
+        let b = parseFloat(prompt("Enter second number:"));
+
+        if (b === 0) {
+          throw "You can't divide by zero!";
+        }
+
+        let result = a / b;
+        alert("Result: " + result);
+      } catch (error) {
+        alert("Error: " + error);
+      }
+    </script>
+  </body>
+</html>
