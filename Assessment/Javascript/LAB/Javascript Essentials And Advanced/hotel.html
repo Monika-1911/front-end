@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUEST_REGISTRATION</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      /* background: linear-gradient(to right, #141E30, #243B55); */
+    }
+
+    .form-container {
+      background: #3c8176;
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    input {
+      box-shadow: none;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 8px rgba(40, 167, 69, 0.6);
+    }
+
+    .btn-danger {
+      padding: 2px 8px;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-4">
+    <div class="form-container">
+      <h1 class="text-white text-uppercase text-center pb-4">registration form</h1>
+      <form class="row g-3 text-white" id="form">
+        <div class="col-md-6">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" placeholder="Enter your Full Name" id="nm">
+          <div id="nm-error" class="text-danger fs-6"></div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Phone Number</label>
+          <input type="number" class="form-control phone" placeholder="Enter your Mobile number" id="mb">
+          <div id="mb-error" class="text-danger fs-6"></div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control email" placeholder="Ex :- abc@gmail.com" id="em">
+          <div id="em-error" class="text-danger fs-6"></div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Address</label>
+          <input type="text" class="form-control address" placeholder="1234 Main St" id="addr">
+          <div id="addr-error" class="text-danger fs-6"></div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Aadhar Number</label>
+          <input type="number" class="form-control adhar" placeholder="Ex :- 1234 5678 1234" id="an">
+          <div id="an-error" class="text-danger fs-6"></div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Purpose of Visit</label>
+          <input type="text" class="form-control visit" placeholder="How your expectation" id="pv">
+          <div id="visit-error" class="text-danger fs-6"></div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Check-in-Date :</label>
+          <input type="date" class="form-control" id="cin">
+          <div id="cin-error" class="text-danger fs-6"></div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Check-out-Date :</label>
+          <input type="date" class="form-control" id="cout">
+          <div id="cout-error" class="text-danger fs-6"></div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Number of Adults</label>
+          <input type="number" class="form-control">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Number of Children</label>
+          <input type="number" class="form-control">
+        </div>
+          <div class="col-12 d-flex justify-content-center">
+  <button type="submit" class="btn btn-dark px-5">ADD</button>
+        </div>
+      </form>
+    </div>
+
+
+    <table border="5" class="table table-hover border-5 mt-4 table-dark text-center">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th class="fnm">NAME</th>
+          <th class="mobile">PHONE</th>
+          <th class="emaill">EMAIL</th>
+          <th class="aadhar">AADHAR</th>
+          <th class="cin">Check-in</th>
+          <th class="cout">Check-out</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function values() {
+      let tbody = document.querySelector("tbody")
+      let trow = tbody.insertRow();
+
+      let idcell = trow.insertCell(0)
+      let namecell = trow.insertCell(1)
+      let phonecell = trow.insertCell(2)
+      let emailcell = trow.insertCell(3)
+      let aadharcell = trow.insertCell(4)
+      let cincell = trow.insertCell(5)
+      let coutcell = trow.insertCell(6)
+      let actioncell = trow.insertCell(7)
+
+      idcell.textContent = tbody.rows.length;
+      namecell.textContent = document.getElementById("nm").value
+      emailcell.textContent = document.getElementById("em").value
+      phonecell.textContent = document.getElementById("mb").value
+      aadharcell.textContent = document.getElementById("an").value
+      cincell.textContent = document.getElementById("cin").value
+      coutcell.textContent = document.getElementById("cout").value
+
+      // add delete button
+      let delBtn = document.createElement("button")
+      delBtn.textContent = "Delete"
+      delBtn.className = "btn btn-danger btn-sm"
+      delBtn.onclick = function () {
+        tbody.removeChild(trow)
+      }
+      actioncell.appendChild(delBtn)
+    }
+
+    document.getElementById("form").onsubmit = function (event) {
+      event.preventDefault()
+
+      let nm = document.getElementById("nm")
+      let mb = document.getElementById("mb")
+      let em = document.getElementById("em")
+      let addr = document.getElementById("addr")
+      let an = document.getElementById("an")
+      let pv = document.getElementById("pv")
+      let cin = document.getElementById("cin")
+      let cout = document.getElementById("cout")
+
+      let cinErr = document.getElementById("cin-error")
+      let coutErr = document.getElementById("cout-error")
+      let nmErr = document.getElementById("nm-error")
+      let mbErr = document.getElementById("mb-error")
+      let emErr = document.getElementById("em-error")
+      let addrErr = document.getElementById("addr-error")
+      let anErr = document.getElementById("an-error")
+      let visitErr = document.getElementById("visit-error")
+
+      // clear errors 
+      cinErr.innerText = ""
+      coutErr.innerText = ""
+      nmErr.innerText = ""
+      mbErr.innerText = ""
+      emErr.innerText = ""
+      addrErr.innerText = ""
+      anErr.innerText = ""
+      visitErr.innerText = ""
+
+      let namePattern = /^[A-Za-z\s]+$/
+      let mobilePattern = /^[6-9][0-9]{9}$/
+      let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      let aadharPattern = /^[0-9]{12}$/
+
+      let hasError = false
+
+      if (nm.value === "") {
+        nmErr.innerHTML = "Name must be required"
+        hasError = true
+      } else if (!namePattern.test(nm.value)) {
+        nmErr.innerHTML = "Only letters are allowed"
+        hasError = true
+      }
+
+      if (mb.value === "") {
+        mbErr.innerHTML = "Mobile number must be required"
+        hasError = true
+      } else if (!mobilePattern.test(mb.value)) {
+        mbErr.innerHTML = "Invalid mobile number"
+        hasError = true
+      }
+
+      if (em.value === "") {
+        emErr.innerHTML = "Email required"
+        hasError = true
+      } else if (!emailPattern.test(em.value)) {
+        emErr.innerHTML = "Invalid email format"
+        hasError = true
+      }
+
+      if (addr.value === "") {
+        addrErr.innerHTML = "Address must be required"
+        hasError = true
+      }
+
+      if (an.value === "") {
+        anErr.innerHTML = "Aadhar must be required"
+        hasError = true
+      } else if (!aadharPattern.test(an.value)) {
+        anErr.innerHTML = "Aadhar must be 12 digits"
+        hasError = true
+      }
+
+      if (pv.value === "") {
+        visitErr.innerHTML = "Feedback must be required"
+        hasError = true
+      }
+
+      if (!cin.value) {
+        cinErr.innerText = "Check-in date required"
+        hasError = true
+      }
+      if (!cout.value) {
+        coutErr.innerText = "Check-out date required"
+        hasError = true
+      }
+      if (cin.value && cout.value && new Date(cout.value) <= new Date(cin.value)) {
+        coutErr.innerText = "Check-out must be after check-in"
+        hasError = true
+      }
+
+      if (!hasError) {
+        values()
+        alert("Form submitted successfully!")
+        document.getElementById("form").reset();
+      }
+    }
+  </script>
+</body>
+</html>
