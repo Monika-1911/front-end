@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- abs :- hide / private -->
+    <!-- encu :- how to access method  -->
+
+    <script>
+
+        function Person(name,age){
+
+            // private _ abs
+            let _name = name;
+            let _age = age;
+
+
+            // ecu :- method
+            this.getName = () =>{
+                return _name;
+            }
+
+            this.getAge = ()=>{
+                return _age;
+            }
+
+            // chnage age 
+            this.setAge = (newage)=>{
+                if(newage){
+                    return _age = newage;
+                }
+                else{
+                    return _age;
+                }
+            }
+
+
+        }
+
+        let user = new Person("jay",23)
+
+        console.log(user)
+        console.log(user._name)
+        console.log(user._age)
+
+
+        console.log(user.getName())
+        console.log(user.getAge())
+        user.setAge(25)
+        console.log(user.getAge())
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

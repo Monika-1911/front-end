@@ -1,0 +1,121 @@
+
+{
+  "admin": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "name": "subadmin",
+      "email": "subadmin@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "shubham sir",
+      "email": "shubham@gmail.com",
+      "password": "4321",
+      "status": "unblock"
+    },
+    {
+      "id": "2",
+      "name": "het",
+      "email": "het@gmail.com",
+      "password": "1234",
+      "status": "block"
+    },
+    {
+      "id": "3",
+      "name": "varj patel",
+      "email": "varj@gmail.com",
+      "password": "1234",
+      "status": "unblock"
+    },
+    {
+      "id": "1762929705995",
+      "name": "vivek",
+      "email": "vivek@gmail.com",
+      "password": "1234",
+      "status": "unblock"
+    },
+    {
+      "id": "1763015276318",
+      "name": "keyur",
+      "email": "keyur@gmail.com",
+      "password": "654321",
+      "status": "unblock"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "cname": "Web Design",
+      "author": "john",
+      "date": "01jan,2026",
+      "img": "https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg?_gl=1*whtw5w*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjIzMjUxMjkkbzMwJGcxJHQxNzYyMzI1MTcwJGoxOSRsMCRoMA..",
+      "title": "How to Web design",
+      "desc": "hello this web design course..."
+    },
+    {
+      "id": "2",
+      "cname": "Back-end ",
+      "author": "prashant sir",
+      "date": "2026-01-21",
+      "img": "https://images.pexels.com/photos/7128957/pexels-photo-7128957.jpeg?_gl=1*ymwjx0*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjIzMjUxMjkkbzMwJGcxJHQxNzYyMzI1MzEzJGozNiRsMCRoMA..",
+      "title": "How to Java course",
+      "desc": "hello this back-end course..."
+    },
+    {
+      "id": "3",
+      "cname": "Front-end",
+      "author": "Shubham sir",
+      "date": "03dec,2024",
+      "img": "https://images.pexels.com/photos/7948005/pexels-photo-7948005.jpeg?_gl=1*3fmq9n*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjIzMjUxMjkkbzMwJGcxJHQxNzYyMzI1MzEzJGozNiRsMCRoMA..",
+      "title": "How to Front-end course",
+      "desc": "hello this front-data course..."
+    },
+    {
+      "id": "1762412319011",
+      "cname": "graphic design",
+      "img": "https://th.bing.com/th/id/OIP.8AbwCATrWvJh5PJwK9B4QwHaHa?w=198&h=198&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+      "date": "2025-11-21",
+      "desc": "This Graphic course design for Tops . .. ",
+      "author": "niral sir",
+      "title": "How to design a layout"
+    },
+    {
+      "id": "1762496703500",
+      "cname": "Design course",
+      "img": "https://th.bing.com/th/id/OIP.W63wx6juQtwfhMnMPM66ewHaDp?w=334&h=172&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+      "date": "2025-11-22",
+      "desc": " Design course dataassfdsadf asd ",
+      "author": "xyz",
+      "title": "Design course data"
+    }
+  ],
+  "team": [
+    {
+      "id": "1",
+      "name": "jiger sir",
+      "designation": "senior trainer",
+      "image": "https://images.pexels.com/photos/8727368/pexels-photo-8727368.jpeg?_gl=1*1w2f34e*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjI4NDI0MzkkbzMxJGcxJHQxNzYyODQyNDk1JGo0JGwwJGgw"
+    },
+    {
+      "id": "2",
+      "name": "Rajni ma'am",
+      "designation": "junior trainer",
+      "image": "https://images.pexels.com/photos/10029786/pexels-photo-10029786.jpeg?_gl=1*ish8lf*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjI4NDI0MzkkbzMxJGcxJHQxNzYyODQyNDk1JGo0JGwwJGgw"
+    },
+    {
+      "id": "1762843836754",
+      "name": "guvrav sir ",
+      "image": "https://images.pexels.com/photos/8217300/pexels-photo-8217300.jpeg?_gl=1*parekc*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjI4NDI0MzkkbzMxJGcxJHQxNzYyODQyNDk1JGo0JGwwJGgw",
+      "designation": "graphic "
+    }
+  ]
+}

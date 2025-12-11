@@ -6,6 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <Script>
+        fetch("data1.json",{
+            method:"GET"
+        })
+
+        .then((res)=>{
+return res.json()
+        })
+.then((res)=>{
+    console.log(res)
+
+})
+    </Script>
 </body>
 </html>

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- class :- it's bluc print of object.  -->
+    <!-- it's collection data member(varibale) and member funtion(function) class  -->
+<!-- 
+    syntax :- 
+    class class-name{
+        memeber function(){
+            data memebr
+        }
+        memeber function(){
+            data memebr
+        }
+    }
+
+    let obj-name = new class-name  -->
+
+    <script>
+
+        class Bank{
+            // member function
+            x = function details(pin,balnce){
+                // data memeber
+                let Bankname = "HDFC";
+                let BankIfSC = "HDFC0002H";
+                let Pindata = pin;
+                let BankBlance = balnce;
+
+                console.log("Bank Name : ",Bankname)
+                console.log("Bank IFSC : ",BankIfSC)
+                console.log("Bank pin : ",Pindata)
+                console.log("bank Balnce : ",BankBlance)
+
+            }
+
+            // member function
+            y = function addmoney(){
+                console.log("Add Money")
+            }
+        }
+
+        // console.log(Bank)
+
+        let jay = new Bank
+        console.log(jay)
+        jay.x(123,5000)
+
+        jay.y()
+
+        let user = new Bank
+        console.log(user)
+        user.y()
+        user.x(234,6000)
+
+    </script>
+</body>
+</html>

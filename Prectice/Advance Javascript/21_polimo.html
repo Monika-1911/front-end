@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) method overloading :- (compile) :- i have one class member function name are smae but deffent parameter.  -->
+    <!-- 2) method overriding :- (runtime) :- i have deffent class member function name are same , it inhritance  -->
+
+    <script>
+
+        // method overloading
+        // class XY{
+        //     data(a){
+        //         console.log("a value :- ",a)
+        //     }
+        //     data(a,b){
+        //         console.log("sum => ",a+b)
+        //     }
+        //     data(a,b){
+        //         console.log("sub =>",a-b)
+        //     }
+        // }
+        // let user = new XY 
+        // console.log(user)
+        // user.data(10,20)
+        // user.data(20,10)
+
+
+        // method overring 
+
+        class A{
+            data(){
+                console.log("Class For A ")
+            }
+        }
+
+        class B extends A{
+            data(){
+                console.log("Class For B")
+            }
+        }
+
+        class C extends B{
+            data(){
+                console.log("Class For C")
+            }
+        }
+
+        // let user = new C 
+        // console.log(user)
+        // user.data()
+        // user.data()
+
+        let data1 = [new A,new B,new C]
+        console.log(data1)
+        for(let arr of data1){
+            arr.data()
+        }
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Arith{
+            
+            // data member this
+            constructor(a,b){
+                this.a = a;
+                this.b = b;
+                console.log("A =>",this.a)
+                console.log("B =>",this.b)
+            }
+            sum(){
+                console.log("sum =>",this.a + this.b)
+                document.writeln(`sum => ${this.a+this.b}`)
+            }
+            sub(){
+                console.log("sub =>",this.a - this.b)
+                document.writeln(`sub => ${this.a-this.b}`)
+            }
+        }
+    
+    let data = new Arith(40,20)
+    console.log(data)
+    data.sum()
+    data.sub()
+
+    data.sum()
+
+    let data1 = new Arith(30,20)
+    data1.sub()
+
+    </script>
+
+
+</body>
+</html>

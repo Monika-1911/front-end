@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        const getdata=async()=>{
+            const res = await axios.get("https://660d95e36ddfa2943b34c530.mockapi.io/users")
+            console.log(res.data)
+            for(let user of res.data){
+                console.log(user.id)
+            }
+        }
+        getdata()
+    
+        let person = {
+            name : "neer",
+            email : "neer@gmail.com",
+            city : "ahmedabad"
+        }
+
+        const putdata=async()=>{
+            const res = await axios.post("https://660d95e36ddfa2943b34c530.mockapi.io/users",person)
+            console.log(res.data)
+        }
+
+        // putdata()
+
+        const removedata=async()=>{
+            const res = await axios.delete("https://660d95e36ddfa2943b34c530.mockapi.io/users/7")
+            console.log(res.data)
+        }
+
+        // removedata()
+
+        let person1 = {
+            id : 5,
+            name : "het",
+            phone : "973647673",
+            email : "het@gamil.com",
+            city : "surat"
+        }
+
+        const updatedata=async()=>{
+            const res = await axios.put(`https://660d95e36ddfa2943b34c530.mockapi.io/users/${person1.id}`,person1)
+            console.log(res.data)
+        }
+
+        updatedata()
+
+
+        
+    </script>
+</body>
+</html>

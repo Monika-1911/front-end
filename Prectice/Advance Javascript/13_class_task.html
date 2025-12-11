@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- memeber function :- store and without function store -->
+    <script>
+        // +,-,*,/
+
+        class Arith{
+            // 1) memeber funtion store and with parameter
+            x = function sum(a,b){
+                console.log("sum =>",a+b)
+                document.writeln("sum =>",a+b,"<br>");
+            }
+
+             // 1) memeber funtion store and without parameter/data meber
+            y = function sub(){
+
+                // data meber/varibale
+                let a = 20;
+                let b = 10;
+                console.log("sub =>",a-b);
+                document.writeln("sub =>",a-b,"<br>");
+            }
+
+            //3 memeber function without store  and with paramter
+            mul(a,b){
+            console.log("mul =>",a*b);
+                document.writeln("mul =>",a*b,"<br>");
+            }
+        //4 memeber function without store  and without paramter
+            divi(){
+                let a = 50
+                let b = 2
+                console.log("divi =>",a/b);
+                document.writeln("divi =>",a/b,"<br>")
+            }
+        }
+
+        // console.log(Arith)
+
+        const data = new Arith
+        console.log(data)
+
+        // 1) store function
+        data.y()
+        data.y()
+
+        data.x(50,20)
+        data.x(30,10)
+
+        // 2) wihout store funtion
+        data.mul(20,20)
+        data.mul(30,10)
+
+        data.divi()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ...rest :- to store a data (function as parameter) -->
+    <!-- ...spared :- to store a data (array and object store ) -->
+
+
+    <script>
+
+        function sum(...mahi){
+            let sum = 0 
+            for(let dhoni in mahi){
+                sum = sum + mahi[dhoni]
+            }
+            return sum
+        }
+
+        console.log(sum(1,2,3,4,5))
+    </script>
+</body>
+</html>

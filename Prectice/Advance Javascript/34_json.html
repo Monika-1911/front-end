@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function output(res){
+            console.log(res)
+        }
+
+        let data = new Promise((call,reject)=>{
+            
+            let newdata = 11
+            if(newdata === 10){
+                call("value will be show")
+            }
+            else{
+                reject("Value will be not show")
+            }
+        })
+        .then(function(res){
+            output(res)
+        })
+        .catch(function(res){
+            output(res)
+        })
+       
+    </script>
+</body>
+</html>

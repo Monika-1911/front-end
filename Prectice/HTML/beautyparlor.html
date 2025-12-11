@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Beauty Parlor</title>
+
+  <style>
+    /* 🌸 General Styles */
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #ffe4ec, #fff8f9);
+      color: #4b2e39;
+    }
+
+    /* 🌺 Header */
+    header {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 182, 193, 0.85);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: 100px;
+      border-radius: 50%;
+    }
+
+    #sound-btn {
+      background: #f48fb1;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    #sound-btn:hover {
+      background: #ec407a;
+    }
+
+    /* 🌼 Layout */
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: calc(100vh - 180px);
+    }
+
+    /* 🌿 Sidebar Menu */
+    .sidebar {
+      width: 220px;
+      background: rgba(255, 182, 193, 0.3);
+      padding: 20px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #4b2e39;
+      font-weight: bold;
+      padding: 10px 15px;
+      display: block;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background: rgba(255, 192, 203, 0.8);
+    }
+
+    /* 🌷 Content Area */
+    .content {
+      flex: 1;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .banner {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .intro-box {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .intro-box h2 {
+      margin-top: 0;
+    }
+
+    /* 💅 Footer */
+    footer {
+      text-align: center;
+      background: rgba(255, 182, 193, 0.8);
+      padding: 15px;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    /* 📱 Responsive Design */
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        background: rgba(255, 182, 193, 0.8);
+        border-bottom: 2px solid #f48fb1;
+      }
+
+      .sidebar ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+
+      .sidebar ul li {
+        margin: 5px;
+      }
+
+      .sidebar a {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+
+      .content {
+        padding: 15px;
+      }
+
+      .banner {
+        max-height: 250px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🎵 Background Music -->
+  <audio id="bg-music" loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/09/audio_2b7f693b90.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- 💖 Header -->
+  <header>
+    <img
+      src="https://cdn.pixabay.com/photo/2016/11/29/02/52/beauty-1869272_1280.jpg"
+      alt="Beauty Parlor Logo"
+      class="logo"
+    />
+    <h1>Glow Beauty Parlor</h1>
+    <button id="sound-btn" onclick="toggleSound()">🔊 Music On/Off</button>
+  </header>
+
+  <!-- 🌸 Main Layout -->
+  <main>
+    <!-- Sidebar Menu -->
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#" class="active" data-page="home">Home</a></li>
+        <li><a href="#" data-page="services">Services</a></li>
+        <li><a href="#" data-page="bridal">Bridal</a></li>
+        <li><a href="#" data-page="courses">Courses</a></li>
+        <li><a href="#" data-page="appointment">Fix an Appointment</a></li>
+        <li><a href="#" data-page="contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Content Area -->
+    <section class="content">
+      <!-- Home -->
+      <div id="home" class="page">
+        <img
+          src="https://cdn.pixabay.com/photo/2017/03/27/13/06/woman-2178482_1280.jpg"
+          class="banner"
+          alt="Beauty Banner"
+        />
+        <div class="intro-box">
+          <h2>Welcome to Glow Beauty Parlor</h2>
+          <p>
+            Discover the art of beauty, relaxation, and confidence. From bridal makeovers to
+            professional beauty courses, we’re here to make you glow every day!
+          </p>
+          <p>Book an appointment today and experience the transformation.</p>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div id="services" class="page" style="display: none;">
+        <h2>Our Services</h2>
+        <ul>
+          <li>💆‍♀️ Facials & Skin Treatments</li>
+          <li>💇 Haircuts, Coloring & Styling</li>
+          <li>💅 Nail Art & Manicure</li>
+          <li>💄 Makeup & Makeovers</li>
+          <li>🧖 Body Spa & Massage</li>
+        </ul>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/03/28/12/15/spa-2189247_1280.jpg"
+          alt="Spa Services"
+          class="banner"
+        />
+      </div>
+
+      <!-- Bridal -->
+      <div id="bridal" class="page" style="display: none;">
+        <h2>Bridal Packages</h2>
+        <p>
+          Get ready for your big day with our premium bridal services — including pre-wedding skin
+          care, bridal makeup, mehndi design, and hair styling.
+        </p>
+        <img
+          src="https://cdn.pixabay.com/photo/2020/02/12/11/31/bride-4840667_1280.jpg"
+          alt="Bridal Makeup"
+          class="banner"
+        />
+      </div>
+
+      <!-- Courses -->
+      <div id="courses" class="page" style="display: none;">
+        <h2>Beauty Courses</h2>
+        <p>
+          Join our professional beauty courses to master the art of makeup, hairstyling, skincare,
+          and nail design. Certificates provided upon completion!
+        </p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/08/06/22/01/makeup-2593484_1280.jpg"
+          alt="Beauty Course"
+          class="banner"
+        />
+      </div>
+
+      <!-- Appointment -->
+      <div id="appointment" class="page" style="display: none;">
+        <h2>Fix an Appointment</h2>
+        <form>
+          <label>Name:</label><br />
+          <input type="text" placeholder="Your name" required /><br /><br />
+          <label>Email:</label><br />
+          <input type="email" placeholder="Your email" required /><br /><br />
+          <label>Date:</label><br />
+          <input type="date" required /><br /><br />
+          <button
+            type="submit"
+            style="
+              background: #f48fb1;
+              color: white;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 20px;
+              cursor: pointer;
+            "
+          >
+            Book Now
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact -->
+      <div id="contact" class="page" style="display: none;">
+        <h2>Contact Us</h2>
+        <p><b>Address:</b> 123 Pink Street, Rose City</p>
+        <p><b>Phone:</b> +1 555-234-6789</p>
+        <p><b>Email:</b> contact@glowbeauty.com</p>
+        <img
+          src="https://cdn.pixabay.com/photo/2017/08/01/09/04/salon-2561842_1280.jpg"
+          alt="Beauty Salon"
+          class="banner"
+        />
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Glow Beauty Parlor | Designed with 💖</p>
+  </footer>
+
+  <!-- 🌷 Script -->
+  <script>
+    // Toggle Background Music
+    const audio = document.getElementById("bg-music");
+    function toggleSound() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+
+    // Fix navigation click handling
+    const navLinks = document.querySelectorAll(".sidebar a");
+    const pages = document.querySelectorAll(".page");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // Hide all pages
+        pages.forEach((page) => (page.style.display = "none"));
+
+        // Show target page
+        const targetPage = link.getAttribute("data-page");
+        document.getElementById(targetPage).style.display = "block";
+
+        // Update active link
+        navLinks.forEach((l) => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>

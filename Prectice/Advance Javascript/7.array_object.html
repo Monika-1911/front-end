@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) arra in arry  -->
+    <!-- 2) arra in object  -->
+    <!-- 3) object in array  -->
+    <!-- 4) object in object -->
+     <script>
+
+        // arr immer arr
+        let arr = [1,2,3,4,[5,6,7,[8,9]]]
+        console.log(arr[2])
+        console.log(arr[4][2])
+        console.log(arr[4][3][1])
+
+        // 2) object in object 
+        let person = {
+            id : 1,
+            name : "het",
+            course :{
+                front : "Front-end",
+                back : "Back-end"
+            }
+        }
+
+        console.log(person.course.back)
+
+        // 3) arr inner object find
+        let data = [1,2,3,4,{
+            name : "Het",
+            age : 21
+        }]
+
+        console.log(data)
+        console.log(data[4].name)
+
+        // 4) object inner arr find
+
+        let person1 = {
+            name :"het",
+            age : 21,
+            course : ["front-end","back-end","full"]
+        }
+
+        console.log(person1)
+        console.log(person1.course[1])
+
+     </script>
+</body>
+</html>

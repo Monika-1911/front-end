@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="5" cellpadding="10">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>city</th>
+          <th>Name</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+    </table>
+    <script>
+      fetch("https://fakestoreapi.com/users", {
+        method: "GET",
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          console.log(data);
+          data.forEach((user, index) => {
+            console.log(user.id);
+            let tbody = document.querySelector("tbody");
+            let trow = tbody.insertRow();
+            let idcell = trow.incertcell(0);hym
+            let Emailcell = trow.Emailcell(1);
+            let citycell = trow.citycell(2);
+            let namecell = trow.namecell(3);
+            let Phonecell = trow.Phonecell(4);
+
+            idcell.textContent = user.id
+                namecell.textContent = user.name
+                Emailcell.textContent = user.Email
+                citycell.textContent = user.address
+                companycell.textContent = user.company.name
+          });
+        });
+    </script>
+  </body>
+</html>

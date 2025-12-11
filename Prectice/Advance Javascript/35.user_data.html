@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        fetch("data.json",{
+            method:"GET"
+        })
+        .then((res)=>{
+            // objecr/array
+            return res.json()
+        })
+        .then((res)=>{
+            console.log(res)
+            res.forEach((user,index) => {
+                    console.log(user)
+                    // document.write("id =>",user.id," Name =>",user.name," Course => ",user.course,"<br>")
+                    document.writeln(`<h2>id :- ${user.id} name :- ${user.name} course :- ${user.course}</h2>`)
+                });
+        })
+
+    </script>
+</body>
+</html>

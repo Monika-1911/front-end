@@ -1,0 +1,33 @@
+{
+    "user":[
+        {
+        "id": 1,
+        "name": "het",
+        "course" : "front-end"
+        },
+        {
+        "id": 2,
+        "name": "Vraj",
+        "course" : "Back-end"
+        },
+        {
+        "id": 3,
+        "name": "sujal",
+        "course" : "Full-stack"
+        }
+    ],
+
+    "admin" : [
+        {
+        "id": 1,
+        "name": "admin",
+        "course" : "front-end"
+        },
+        {
+        "id": 1,
+        "name": "admin2",
+        "course" : "front-end"
+        }
+    ]
+    
+}

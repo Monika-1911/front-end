@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- inritance :- one class to another class data pass -->
+     <!-- pre proepry pass child porpy -->
+
+    <!-- type  5 
+    1) single inherintance A-B
+    2) multi level A-B-C
+    3) multiple inritance :- not possible 
+    4) hyrichical A-B , A-C
+    5) hybrid 
+    exg
+    -->
+
+    <!-- syntax ;- 
+    class A{
+
+    }
+    class B extens A{
+
+    } -->
+
+    <script>
+
+        class A {
+            x(){
+                console.log("This is class A Data .")
+            }
+        }
+        class B extends A {
+            y(){
+                console.log("This is Class B Data.")
+            }
+        }
+
+        let user = new B 
+        console.log(user)
+        user.x()
+        user.y()
+        user.x()
+
+    </script>
+</body>
+</html>

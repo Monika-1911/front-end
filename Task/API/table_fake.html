@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="2" cellpadding="14">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Zip</th>
+          <th>Country</th>
+          <th>Domain</th>
+          <th>Logo</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      fetch("https://fake-json-api.mock.beeceptor.com/companies", {
+        method: "GET",
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((res) => {
+          let data = res.map((user, index) => {
+            console.log(user);
+            return `
+            
+                <tr>
+                    <td>${user.id}</td>
+                    <td>${user.name}</td>
+                    <td>${user.address}</td>
+                    <td>${user.zip}</td>
+                    <td>${user.country}</td>
+                    <td>${user.domain}</td>
+                    <td><img src="${user.logo}" alt="" width="50" height="50"></td>
+                </tr>
+                `;
+          });
+          document.querySelector("tbody").innerHTML = data.join("");
+        });
+    </script>
+  </body>
+</html>

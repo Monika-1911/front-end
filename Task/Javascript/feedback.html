@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset & Base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f4f7fa;
+      color: #333;
+      padding: 20px;
+    }
+    h1, h2 { text-align: center; margin-bottom: 20px; }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      gap: 30px;
+    }
+
+    /* Card */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* Form */
+    form {
+      display: grid;
+      gap: 15px;
+    }
+    label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: block;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: border 0.2s;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+    textarea { resize: none; height: 80px; }
+
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover { background: #0056b3; }
+
+    /* Message */
+    .message {
+      padding: 12px;
+      border-radius: 6px;
+      font-weight: 500;
+      margin-top: 10px;
+      display: none;
+    }
+    .message.success { background: #d4edda; color: #155724; }
+    .message.error { background: #f8d7da; color: #721c24; }
+
+    /* Feedback Table */
+    .search-bar {
+      margin-bottom: 15px;
+      display: flex;
+      gap: 10px;
+    }
+    .search-bar input {
+      flex: 1;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #007bff;
+      color: #fff;
+    }
+    tr:nth-child(even) { background: #f9f9f9; }
+    .delete-btn {
+      background: #dc3545;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .delete-btn:hover { background: #b02a37; }
+
+    /* Responsive */
+    @media(max-width: 600px) {
+      .search-bar { flex-direction: column; }
+      th, td { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Feedback Form -->
+    <div class="card">
+      <h1>Event Feedback Form</h1>
+      <form id="feedbackForm">
+        <div>
+          <label for="name">Attendee Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="event">Event Attended</label>
+          <select id="event" name="event" required>
+            <option value="">-- Select Event --</option>
+            <option value="Webinar">Webinar</option>
+            <option value="Workshop">Workshop</option>
+            <option value="Meetup">Meetup</option>
+          </select>
+        </div>
+        <div>
+          <label for="rating">Rating</label>
+          <select id="rating" name="rating" required>
+            <option value="">-- Select Rating --</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+        </div>
+        <div>
+          <label for="comments">Comments</label>
+          <textarea id="comments" name="comments" required></textarea>
+        </div>
+        <button type="submit">Submit Feedback</button>
+        <div id="formMessage" class="message"></div>
+      </form>
+    </div>
+
+    <!-- Feedback Viewer -->
+    <div class="card">
+      <h2>View Feedback</h2>
+      <div class="search-bar">
+        <input type="text" id="searchName" placeholder="Search by Name">
+        <input type="text" id="searchEvent" placeholder="Search by Event">
+      </div>
+      <div id="feedbackTableContainer">
+        <p>No feedback found.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Utility Module
+    const StorageUtil = {
+      getItem(key) {
+        return JSON.parse(localStorage.getItem(key)) || [];
+      },
+      setItem(key, value) {
+        localStorage.setItem(key, JSON.stringify(value));
+      }
+    };
+
+    // Feedback Form Handler
+    class FeedbackFormHandler {
+      constructor(form, messageEl) {
+        this.form = form;
+        this.messageEl = messageEl;
+        this.init();
+      }
+
+      init() {
+        this.form.addEventListener("submit", (e) => this.handleSubmit(e));
+        this.form.addEventListener("input", (e) => this.validateField(e.target));
+      }
+
+      validateField(field) {
+        let isValid = true;
+        let value = field.value.trim();
+
+        if (field.id === "name") isValid = value.length >= 3;
+        if (field.id === "email") isValid = /^\S+@\S+\.\S+$/.test(value);
+        if (field.id === "event") isValid = value !== "";
+        if (field.id === "rating") isValid = parseInt(value) >= 1 && parseInt(value) <= 5;
+        if (field.id === "comments") isValid = value.length >= 10;
+
+        field.style.borderColor = isValid ? "#ccc" : "red";
+        return isValid;
+      }
+
+      validateForm() {
+        return [...this.form.elements].every(el => {
+          if (el.tagName !== "BUTTON") return this.validateField(el);
+          return true;
+        });
+      }
+
+      handleSubmit(e) {
+        e.preventDefault();
+        if (!this.validateForm()) {
+          this.showMessage("Please correct the errors before submitting.", "error");
+          return;
+        }
+
+        const feedback = {
+          id: Date.now(),
+          name: this.form.name.value.trim(),
+          email: this.form.email.value.trim(),
+          event: this.form.event.value,
+          rating: this.form.rating.value,
+          comments: this.form.comments.value.trim()
+        };
+
+        const data = StorageUtil.getItem("feedbacks");
+        data.push(feedback);
+        StorageUtil.setItem("feedbacks", data);
+
+        this.showMessage("Feedback submitted successfully!", "success");
+        this.clearForm();
+        viewer.renderTable();
+      }
+
+      clearForm() {
+        this.form.reset();
+        [...this.form.elements].forEach(el => {
+          if (el.tagName !== "BUTTON") el.style.borderColor = "#ccc";
+        });
+      }
+
+      showMessage(msg, type) {
+        this.messageEl.textContent = msg;
+        this.messageEl.className = `message ${type}`;
+        this.messageEl.style.display = "block";
+        setTimeout(() => this.messageEl.style.display = "none", 3000);
+      }
+    }
+
+    // Feedback Viewer
+    class FeedbackViewer {
+      constructor(container) {
+        this.container = container;
+        this.searchName = document.getElementById("searchName");
+        this.searchEvent = document.getElementById("searchEvent");
+        this.init();
+      }
+
+      init() {
+        this.searchName.addEventListener("input", () => this.renderTable());
+        this.searchEvent.addEventListener("input", () => this.renderTable());
+        this.renderTable();
+      }
+
+      renderTable() {
+        const feedbacks = StorageUtil.getItem("feedbacks");
+        const nameFilter = this.searchName.value.toLowerCase();
+        const eventFilter = this.searchEvent.value.toLowerCase();
+
+        const filtered = feedbacks.filter(f =>
+          f.name.toLowerCase().includes(nameFilter) &&
+          f.event.toLowerCase().includes(eventFilter)
+        );
+
+        if (filtered.length === 0) {
+          this.container.innerHTML = "<p>No feedback found.</p>";
+          return;
+        }
+
+        let table = "<table><thead><tr><th>Name</th><th>Email</th><th>Event</th><th>Rating</th><th>Comments</th><th>Action</th></tr></thead><tbody>";
+        filtered.forEach(f => {
+          table += `<tr>
+            <td>${f.name}</td>
+            <td>${f.email}</td>
+            <td>${f.event}</td>
+            <td>${f.rating}</td>
+            <td>${f.comments}</td>
+            <td><button class="delete-btn" data-id="${f.id}">Delete</button></td>
+          </tr>`;
+        });
+        table += "</tbody></table>";
+        this.container.innerHTML = table;
+
+        this.container.querySelectorAll(".delete-btn").forEach(btn =>
+          btn.addEventListener("click", (e) => this.deleteFeedback(e))
+        );
+      }
+
+      deleteFeedback(e) {
+        const id = Number(e.target.dataset.id);
+        let feedbacks = StorageUtil.getItem("feedbacks");
+        feedbacks = feedbacks.filter(f => f.id !== id);
+        StorageUtil.setItem("feedbacks", feedbacks);
+        this.renderTable();
+      }
+    }
+
+    // Initialize App
+    const formHandler = new FeedbackFormHandler(
+      document.getElementById("feedbackForm"),
+      document.getElementById("formMessage")
+    );
+    const viewer = new FeedbackViewer(document.getElementById("feedbackTableContainer"));
+  </script>
+</body>
+</html>
