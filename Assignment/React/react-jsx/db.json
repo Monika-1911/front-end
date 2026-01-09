@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Monika Patel",
+      "email": "Monika@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Charmi Patel",
+      "email": "charmi@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Tisha Patel",
+      "email": "Tisha@gmail.com"
+    },
+    {
+        "id": 4,
+      "name": "Poonam Kumbhani",
+      "email": "Poonam@gmail.com"
+    }
+  ]
+}
