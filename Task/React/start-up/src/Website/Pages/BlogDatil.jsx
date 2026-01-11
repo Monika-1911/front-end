@@ -1,12 +1,12 @@
-import React from 'react'
-// import Header2 from '../Coman/Header'
-// import Footer from '../Coman/Footer'
 
+import React from 'react'
+import Header2 from '../coman/Header2'
+import Footer from '../coman/Footer'
 
 function BlogDatil() {
     return (
         <div>
-            <Header2  title="Blog Detail" data="Blog Detail" />
+            <Header2  title="BlogDatil" data="Blog Detail" />
             <div>
                 {/* Blog Start */}
                 <div className="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -212,7 +212,7 @@ function BlogDatil() {
                 {/* Vendor Start */}
                 <div className="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
                     <div className="container py-5 mb-5">
-                        <div className="bg-white">
+                        <div className="bg-w">
                             <div className="owl-carousel vendor-carousel">
                                 <img src="img/vendor-1.jpg" alt />
                                 <img src="img/vendor-2.jpg" alt />
@@ -229,8 +229,9 @@ function BlogDatil() {
                 </div>
                 {/* Vendor End */}
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
+
 export default BlogDatil

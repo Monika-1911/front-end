@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creative Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f2f5f9;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to right, #4facfe, #00c6ff);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 28px;
+        }
+
+        /* Services */
+        .services {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            width: 300px;
+            padding: 30px 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+        }
+
+        .icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(to right, #4facfe, #00c6ff);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 15px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 22px;
+            background: #4facfe;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00c6ff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Creative Services</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2 class="section-title">What We Offer</h2>
+
+    <div class="services">
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Web Design</h3>
+            <p>Attractive, responsive and user-friendly website designs.</p>
+            <a href="#" class="btn">Explore</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">⚙️</div>
+            <h3>Development</h3>
+            <p>Clean and optimized development using modern standards.</p>
+            <a href="#" class="btn">Explore</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">💬</div>
+            <h3>Support</h3>
+            <p>Reliable support to keep your business running smoothly.</p>
+            <a href="#" class="btn">Explore</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2026 Creative Services | Designed for WD Project
+</footer>
+
+</body>
+</html>
