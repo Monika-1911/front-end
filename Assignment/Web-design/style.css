@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+/* Header */
+header {
+    background-color: #e74c3c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Menu Section */
+.menu {
+    text-align: center;
+    padding: 20px;
+}
+
+.food-box {
+    background-color: white;
+    width: 250px;
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+.food-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.food-box h3 {
+    margin: 10px 0 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
