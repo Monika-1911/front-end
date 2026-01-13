@@ -7,6 +7,7 @@ import ProductDetail from "./pages/ProductDetail";
 import CartPage from "./pages/CartPage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ProductCard from "./components/ProductCard";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/product/:id" element={<ProductCard />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
